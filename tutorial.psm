@@ -1,0 +1,18 @@
+; 	your_program.psm
+;
+; 	This is the start of 'your_program' for KCPSM6
+;
+; LEDs
+CONSTANT Led_port, 01
+;
+; Switches
+CONSTANT Sw_port, 00
+;
+    JUMP cold_start
+    JUMP cold_start
+    JUMP cold_start
+    JUMP cold_start
+cold_start: 
+	INPUT s0, Sw_port
+	OUTPUT s0, Led_port
+	jump cold_start
